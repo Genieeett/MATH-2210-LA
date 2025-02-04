@@ -2,6 +2,8 @@
 title: "MATH2210-notes"
 ---
 
-This is a Quarto website.
+Click the 'Tan_Definitions' icon on the bar to view my notes.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Since this is the first time using quarto website, it may looks wierd. But it is much more easier for me to modify and review.
+
+In order to keep my notes up to date, I'll email the link everytime the homework asked to.
