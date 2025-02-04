@@ -1,0 +1,362 @@
+---
+Title: MATH 2210Q notes
+author: Qianruo Tan
+format: html
+---
+# Part 1: matrix
+
+### System of linear equations
+$$
+\begin{cases}
+x + 2y - z = 3 \\
+3x - y + 2z = 7 \\
+x - 2y + 4z = -5
+\end{cases}
+$$
+
+### solution
+- Exactly one solution (consistant, unique)
+- Infinite many solutions (consist, not unique)
+- No solutions (inconsist)
+
+### coefficient matrix
+$$
+\begin{bmatrix}
+1 & 2 & -1 \\
+3 & -1 & 2 \\
+1 & -2 & 4
+\end{bmatrix}
+$$
+
+### augmented matrix
+$$
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+3 & -1 & 2 & 7 \\
+1 & -2 & 4 & -5
+\end{array}\right]
+$$
+
+## vector equation
+$$
+x_1 
+\begin{bmatrix} 
+2 \\ 
+-3 
+\end{bmatrix} 
++ x_2 
+\begin{bmatrix} 
+3 \\ 
+1 
+\end{bmatrix} 
+= 
+\begin{bmatrix} 
+9 \\ 
+-2 
+\end{bmatrix}
+$$
+
+
+
+## matrix equation A $\vec{x}$ = $\vec{b}$
+$$
+\begin{bmatrix} 
+2 & 3 \\ 
+-3 & 1 
+\end{bmatrix} 
+\begin{bmatrix} 
+x_1 \\ 
+x_2 
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+9 \\ 
+-2 
+\end{bmatrix}
+$$
+
+### row-equivalent matrices
+$$
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+3 & -1 & 2 & 7 \\
+1 & -2 & 4 & -5
+\end{array}\right]
+\to
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & -7 & 5 & -2 \\
+0 & -4 & 5 & -8
+\end{array}\right]
+\to
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & -\frac{5}{7} & \frac{2}{7} \\
+0 & 0 & 1 & -1
+\end{array}\right]
+$$
+
+### row-echelon form (ref)
+$$
+\left[\begin{array}{ccc|c}
+1 & 2 & -1 & 3 \\
+0 & 1 & -\frac{5}{7} & \frac{2}{7} \\
+0 & 0 & 1 & -1
+\end{array}\right]
+$$
+
+### reduced row-echelon form (rref)
+$$
+\left[\begin{array}{ccc|c}
+1 & 0 & 0 & 1 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & -1
+\end{array}\right]
+$$
+
+### pivot
+Def: first non-zero entries in each row of the row-echelon form
+
+### pivot column
+Def: in this case, the columns containing the pivots are the 1st, 2nd, and 3rd columns
+
+### non-pivot column
+Def: in this case, the 4th column is a non-pivot column
+
+### basic variable
+Def: The variables corresponding to the pivot columns are the basic variables. In this case: $x_1, x_2, \text{and } x_3$
+
+### free variable
+Def: The variables corresponding to the non-pivot columns are the free variables. In this case: $x_4$.
+
+### general solution
+$$
+\begin{aligned}
+x_1 &= 1 - x_4, \\
+x_2 &= -1, \\
+x_3 &= -1, \\
+x_4 &= x_4 \quad (\text{free variable}).
+\end{aligned}
+$$
+
+### particular solution
+A particular solution is obtained by setting all free variables to 0.
+$$
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4
+\end{bmatrix}
+$$
+=
+$$
+\begin{bmatrix}
+1 \\ -1 \\ -1 \\ 0
+\end{bmatrix}
+$$
+
+### parametric form of a solution
+Express the general solution as a linear combination of vectors:
+$$
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4
+\end{bmatrix}
+$$
+=
+$$
+\begin{bmatrix}
+1 \\ -1 \\ -1 \\ 0
+\end{bmatrix}
++
+x_4
+\begin{bmatrix}
+-1 \\ 0 \\ 0 \\ 1
+\end{bmatrix}, \quad x_4 \in \mathbb{R}.
+$$
+
+
+
+
+
+# Part 2: Linear combination
+### linear conbination of vectors
+Def: A linear conbination of vectors is a combination that uses addition and scalar multiplication
+
+linear combos of $\hat{\imath}$, $\hat{\jmath}$
+
+### span
+Def: The span of a set of vector $\{\hat{\jmath}_1, \hat{\jmath}_2, \dots, \hat{\jmath}_n\}$ is the set of all linear combination of those vector
+$$
+\text{span}\{\hat{\jmath}_1, \hat{\jmath}_2, \dots, \hat{\jmath}_n\} = c_1\hat{\jmath}_1 + c_2\hat{\jmath}_2 + \dots + c_n\hat{\jmath}_n, \quad \text{where } c_i \in \mathbb{R}.
+$$
+$\mathbb{R}^2$ represents all (x,y) points on the xy-plane
+
+
+Using 2-D vectors, what kind of spans can we get?
+
+- no solutions: won't happen
+
+- **point(origin):** 
+$$\text{span}\left\{\begin{bmatrix}
+0  \\
+0 
+\end{bmatrix}\right\}
+$$
+in this situation, the object that been describe hasn't go anywhere
+
+- **line in $\mathbb{R}^2$:**
+$$
+\text{span}\left\{
+\begin{bmatrix}
+3 \\
+0
+\end{bmatrix},
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}
+\right\}
+$$
+this meets the x-axis, where y=0
+
+$$\text{span}\left\{\begin{bmatrix}
+3  \\
+1 
+\end{bmatrix}\right\}
+$$
+= 
+$$
+\text{span}\left\{
+\begin{bmatrix}
+3 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+3 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+3 \\
+1
+\end{bmatrix}
+\right\}
+$$
+= 
+$$
+\text{span}\left\{
+\begin{bmatrix}
+3 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+3 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+6 \\
+2
+\end{bmatrix}
+\right\}
+$$
+in this case, they are parallel vactors(multiplies of eath others)
+
+- **infinite solution: all of $\mathbb{R}^2$:** 
+$$
+\text{span}\left\{
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+2 \\
+2
+\end{bmatrix}, 
+\begin{bmatrix}
+7 \\
+4
+\end{bmatrix}
+\right\}
+$$
+=
+$$
+\text{span}\left\{
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, 
+\begin{bmatrix}
+7 \\
+4
+\end{bmatrix}
+\right\}
+$$
+
+
+**eg.**
+
+***Is $(\begin{bmatrix} 8 \\ 3 \\ 17 \end{bmatrix}\) in the span of \(\left\{ \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix} \right\})$?***
+
+We need to determine whether there exist scalars \(x_1\) and \(x_2\) such that:
+$$
+x_1 
+\begin{bmatrix} 
+1 \\ 
+3 \\ 
+0 
+\end{bmatrix} 
++ x_2 
+\begin{bmatrix} 
+2 \\ 
+1 \\ 
+5 
+\end{bmatrix} 
+= 
+\begin{bmatrix} 
+8 \\ 
+3 \\ 
+17 
+\end{bmatrix}
+$$
+
+This is equivalent to solving the matrix equation:
+$$
+\begin{bmatrix} 
+1 & 2 \\ 
+3 & 1 \\ 
+0 & 5 
+\end{bmatrix} 
+\begin{bmatrix} 
+x_1 \\ 
+x_2 
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+8 \\ 
+3 \\ 
+17 
+\end{bmatrix}
+$$
+
+equivalentaly: is 
+$$
+\left[\begin{array}{ccc|c}
+1 & 2 & 8 \\
+3 & 1 & 3 \\
+0 & 5 & 17
+\end{array}\right]
+\to
+\left[\begin{array}{ccc|c}
+1 & 2 & 8 \\
+0 & -5 & -21 \\
+0 & 5 & 17
+\end{array}\right]
+\to
+\left[\begin{array}{ccc|c}
+1 & 2 & 8 \\
+0 & -5 & -21 \\
+0 & 0 & -4
+\end{array}\right]
+$$
+
+the third row is 0 = -4, which mean it is in consistant
+
+
+## linearly independent/dependent
