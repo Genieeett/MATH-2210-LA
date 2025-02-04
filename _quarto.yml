@@ -1,0 +1,24 @@
+project:
+  type: book
+
+book:
+  title: "MATH 2210Q notes"
+  subtitle: "MATH 2210Q linear algebra @ UConn, Spring 2025"
+  author:
+    - name: Qianruo Tan
+  date: today
+
+  
+  chapters:
+    - Tan_definitions_qmd
+
+bibliography: 
+csl: apa.csl
+
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrbook
+    include-in-header: preamble.tex
