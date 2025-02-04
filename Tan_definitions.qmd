@@ -3,7 +3,8 @@ Title: MATH 2210Q notes
 author: Qianruo Tan
 format: html
 ---
-# Part 1: matrix
+
+# Part 0: Equations (systems)
 
 ### System of linear equations
 $$
@@ -14,12 +15,15 @@ x - 2y + 4z = -5
 \end{cases}
 $$
 
-### solution
+### Solution
 - Exactly one solution (consistant, unique)
 - Infinite many solutions (consist, not unique)
 - No solutions (inconsist)
 
-### coefficient matrix
+# Part 1: Types of Matrix and (R)REF
+
+
+### Coefficient matrix
 $$
 \begin{bmatrix}
 1 & 2 & -1 \\
@@ -28,7 +32,8 @@ $$
 \end{bmatrix}
 $$
 
-### augmented matrix
+
+### Augmented matrix
 $$
 \left[\begin{array}{ccc|c}
 1 & 2 & -1 & 3 \\
@@ -37,7 +42,8 @@ $$
 \end{array}\right]
 $$
 
-## vector equation
+
+### Vector equation
 $$
 x_1 
 \begin{bmatrix} 
@@ -57,8 +63,7 @@ x_1
 $$
 
 
-
-## matrix equation A $\vec{x}$ = $\vec{b}$
+### Matrix equation A $\vec{x}$ = $\vec{b}$
 $$
 \begin{bmatrix} 
 2 & 3 \\ 
@@ -74,6 +79,7 @@ x_2
 -2 
 \end{bmatrix}
 $$
+
 
 ### row-equivalent matrices
 $$
@@ -96,6 +102,7 @@ $$
 \end{array}\right]
 $$
 
+
 ### row-echelon form (ref)
 $$
 \left[\begin{array}{ccc|c}
@@ -104,6 +111,7 @@ $$
 0 & 0 & 1 & -1
 \end{array}\right]
 $$
+
 
 ### reduced row-echelon form (rref)
 $$
@@ -117,17 +125,22 @@ $$
 ### pivot
 Def: first non-zero entries in each row of the row-echelon form
 
+
 ### pivot column
 Def: in this case, the columns containing the pivots are the 1st, 2nd, and 3rd columns
+
 
 ### non-pivot column
 Def: in this case, the 4th column is a non-pivot column
 
+
 ### basic variable
 Def: The variables corresponding to the pivot columns are the basic variables. In this case: $x_1, x_2, \text{and } x_3$
 
+
 ### free variable
 Def: The variables corresponding to the non-pivot columns are the free variables. In this case: $x_4$.
+
 
 ### general solution
 $$
@@ -138,6 +151,7 @@ x_3 &= -1, \\
 x_4 &= x_4 \quad (\text{free variable}).
 \end{aligned}
 $$
+
 
 ### particular solution
 A particular solution is obtained by setting all free variables to 0.
@@ -152,6 +166,7 @@ $$
 1 \\ -1 \\ -1 \\ 0
 \end{bmatrix}
 $$
+
 
 ### parametric form of a solution
 Express the general solution as a linear combination of vectors:
@@ -177,12 +192,14 @@ $$
 
 
 # Part 2: Linear combination
+
+
 ### linear conbination of vectors
 Def: A linear conbination of vectors is a combination that uses addition and scalar multiplication
 
 linear combos of $\hat{\imath}$, $\hat{\jmath}$
 
-### span
+### Span
 Def: The span of a set of vector $\{\hat{\jmath}_1, \hat{\jmath}_2, \dots, \hat{\jmath}_n\}$ is the set of all linear combination of those vector
 $$
 \text{span}\{\hat{\jmath}_1, \hat{\jmath}_2, \dots, \hat{\jmath}_n\} = c_1\hat{\jmath}_1 + c_2\hat{\jmath}_2 + \dots + c_n\hat{\jmath}_n, \quad \text{where } c_i \in \mathbb{R}.
@@ -357,6 +374,10 @@ $$
 $$
 
 the third row is 0 = -4, which mean it is in consistant
+
+
+
+
 
 
 ## linearly independent/dependent
