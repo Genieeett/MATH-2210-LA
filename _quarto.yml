@@ -14,10 +14,6 @@ chapters:
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrbook
-    include-in-header: preamble.tex
-
 
 execute:
   freeze: auto

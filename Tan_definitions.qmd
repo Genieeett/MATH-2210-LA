@@ -1,7 +1,5 @@
 ---
-Title: MATH 2210Q notes
-author: Qianruo Tan
-format: html
+Title: "Notes"
 ---
 
 # Part 0: Equations (systems)
