@@ -374,8 +374,48 @@ $$
 the third row is 0 = -4, which mean it is in consistant
 
 
+# Part 3: Homogeneous and Non-Homogeneous systems
+
+## Homogeneous systems
+Def: Is one where the augumented part is all zeros. As a matrix equation we have A $\vec{x}$ = $\vec{O}$
+It is always consistent.
+A $\vec{x}$ = $\vec{O}$ can never have a row [0 0 0 ...0 | non-zero]  the augumented part is always 0.
+As row operation does not change the argumentd $\vec{O}$.
+The solution $\vec{x}$ = $\vec{O}$ is always a solution. ($\vec{x}$ is a **trivial solution**)
+
+*Are there non-trivial solution?*
+- If there is at least one non-trivial solution, there has to be infinite many.
+- If there are non-trivial solution, there must be a free variable.
+- If there is just the trivial solutoin, there are no free variable.
+
+## Non-Homogeneous systems
+Def: Is one of the form A $\vec{x}$ = $\vec{b}$ where $\vec{b}$ NOT equal to $\vec{O}$
 
 
+# Part 4: Linear independence/dependence
 
+## Linear independence
+Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly independent** if:
+$$
+c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
+$$
+has only the **trivial solution**:
+$$
+c_1 = 0, \quad c_2 = 0, \quad \ldots, \quad c_n = 0
+$$
 
-## linearly independent/dependent
+## Linear dependence:
+Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly dependent** if:
+$$
+c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
+$$
+has **non-trivial solutions**.
+
+- If we set up a system of equations corresponding to:
+
+$$
+c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0},
+$$
+
+  - $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ are **linearly independent (L.I.)** if there are **no free variables**.
+  - $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ are **linearly dependent (L.D.)** if there is **a free variable** (i.e., there are non-trivial solutions).
