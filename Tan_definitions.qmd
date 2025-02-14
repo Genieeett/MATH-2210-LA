@@ -374,32 +374,48 @@ $$
 the third row is 0 = -4, which mean it is in consistant
 
 
-# Part 3: Homogeneous and Non-Homogeneous systems
+# Part 1.7.1: Homogeneous and Non-Homogeneous systems
 
 ## Homogeneous systems
 Def: Is one where the augumented part is all zeros. As a matrix equation we have A $\vec{x}$ = $\vec{O}$
+
 It is always consistent.
 A $\vec{x}$ = $\vec{O}$ can never have a row [0 0 0 ...0 | non-zero]  the augumented part is always 0.
+
 As row operation does not change the argumentd $\vec{O}$.
+
 The solution $\vec{x}$ = $\vec{O}$ is always a solution. ($\vec{x}$ is a **trivial solution**)
 
+If there are only dependent variables (no free variables), there is only the trivial solution.
+
+
 *Are there non-trivial solution?*
+
 - If there is at least one non-trivial solution, there has to be infinite many.
+
 - If there are non-trivial solution, there must be a free variable.
+
 - If there is just the trivial solutoin, there are no free variable.
+
+- Nontrivial solutions exist if and only if the system has free variables.
+
+- If there are free variables, there are infinitely many nontrivial solutions.
+
 
 ## Non-Homogeneous systems
 Def: Is one of the form A $\vec{x}$ = $\vec{b}$ where $\vec{b}$ NOT equal to $\vec{O}$
 
 
-# Part 4: Linear independence/dependence
+# Part 1.7.2: Linear independence/dependence
 
 ## Linear independence
 Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly independent** if:
+
 $$
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
 $$
 has only the **trivial solution**:
+
 $$
 c_1 = 0, \quad c_2 = 0, \quad \ldots, \quad c_n = 0
 $$
@@ -419,3 +435,43 @@ $$
 
   - $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ are **linearly independent (L.I.)** if there are **no free variables**.
   - $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ are **linearly dependent (L.D.)** if there is **a free variable** (i.e., there are non-trivial solutions).
+
+
+
+# Part 1.8: Transformation
+
+## Transformation
+Def: A transformation is sth that turns one object into another
+
+$\mathcal{T}$ $\mathbb{R} \to \mathbb{R}$
+
+given by $\mathcal{T}(x) = x^2$
+
+- $\mathcal{T}$ means the name of transformation
+
+- $\mathbb{R}$ means the set in wchich the input live (Domain)
+
+- into $\mathbb{R}$ means the set in which the output live (Codomin)
+
+- Range = [0,$\infty$) it is a set of output
+
+Codomain and the range are not necesserily the same
+
+Range is a subset of the Codomain
+
+
+
+# Linear transformation
+Def: a transformation $\mathcal{T}$ is linear if:
+    
+(1): $\mathcal{T}(\vec{x}+\vec{y})=\mathcal{T}(\vec{x})+\mathcal{T}({x})$
+For all $\vec{x}$ and $\vec{y}$ in the domain
+
+(2): $\mathcal{T} (\text{c}\vec{x}) = \text{c}\mathcal{T}(\vec{x})$
+For all $\vec{x}$ in the domain and all scalars c
+
+Note: We could combine them into one property:
+$\mathcal{T}(\text{c}\vec{x}+\text{d}\vec{y})=\text{c}\mathcal{T}(\vec{x})+\text{d}\mathcal{T}(\vec{y})$
+
+To show something is linear, just need to prove one of two properties are equal.
+To show something is not linear, need to list all four ways (see Feb 13 class examples).
