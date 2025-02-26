@@ -437,8 +437,8 @@ x_2
 </section>
 <section id="section-1.5-solution-sets-of-linear-systems-homogeneous-and-non-homogeneous-systems" class="level1">
 <h1>Section 1.5: Solution Sets of Linear Systems (Homogeneous and Non-Homogeneous systems)</h1>
-<section id="homogeneous-systems" class="level2">
-<h2 class="anchored" data-anchor-id="homogeneous-systems">Homogeneous systems</h2>
+<section id="homogeneous-systems" class="level3">
+<h3 class="anchored" data-anchor-id="homogeneous-systems">Homogeneous systems</h3>
 <p>Def: Is one where the augumented part is all zeros. As a matrix equation we have A <span class="math inline">\(\vec{x}\)</span> = <span class="math inline">\(\vec{O}\)</span></p>
 <p>It is always consistent. A <span class="math inline">\(\vec{x}\)</span> = <span class="math inline">\(\vec{O}\)</span> can never have a row [0 0 0 …0 | non-zero] the augumented part is always 0.</p>
 <p>As row operation does not change the argumentd <span class="math inline">\(\vec{O}\)</span>.</p>
@@ -453,15 +453,15 @@ x_2
 <li><p>If there are free variables, there are infinitely many nontrivial solutions.</p></li>
 </ul>
 </section>
-<section id="non-homogeneous-systems" class="level2">
-<h2 class="anchored" data-anchor-id="non-homogeneous-systems">Non-Homogeneous systems</h2>
+<section id="non-homogeneous-systems" class="level3">
+<h3 class="anchored" data-anchor-id="non-homogeneous-systems">Non-Homogeneous systems</h3>
 <p>Def: Is one of the form A <span class="math inline">\(\vec{x}\)</span> = <span class="math inline">\(\vec{b}\)</span> where <span class="math inline">\(\vec{b}\)</span> NOT equal to <span class="math inline">\(\vec{O}\)</span></p>
 </section>
 </section>
 <section id="section-1.7-linear-independence" class="level1">
 <h1>Section 1.7: Linear Independence</h1>
-<section id="linear-independence" class="level2">
-<h2 class="anchored" data-anchor-id="linear-independence">Linear independence</h2>
+<section id="linear-independence" class="level3">
+<h3 class="anchored" data-anchor-id="linear-independence">Linear independence</h3>
 <p>Def: A set of vectors <span class="math inline">\(( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )\)</span> is <strong>linearly independent</strong> if:</p>
 <p><span class="math display">\[
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
@@ -470,8 +470,8 @@ c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
 c_1 = 0, \quad c_2 = 0, \quad \ldots, \quad c_n = 0
 \]</span></p>
 </section>
-<section id="linear-dependence" class="level2">
-<h2 class="anchored" data-anchor-id="linear-dependence">Linear dependence:</h2>
+<section id="linear-dependence" class="level3">
+<h3 class="anchored" data-anchor-id="linear-dependence">Linear dependence:</h3>
 <p>Def: A set of vectors <span class="math inline">\(( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )\)</span> is <strong>linearly dependent</strong> if: <span class="math display">\[
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
 \]</span> has <strong>non-trivial solutions</strong>.</p>
@@ -638,21 +638,27 @@ CA = AC = I_n
 <p><span class="math display">\[[
 \boxed{ AA^{-1} = A^{-1} A = I_n }
 ]\]</span></p>
-<p>Note: Not all <span class="math inline">\(( n \times n )\)</span> matrices are invertible. A matrix which is not invertible is sometimes called a matrix.</p>
-<p>An invertible matrix is sometimes called a matrix.</p>
-(Inverse of a ( 2 ) invertible matrix). [ A =
-<span class="math display">\[\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\]</span>
-. ] If ( ad - bc ), then ( A ) is invertible and [ A^{-1} =
-<span class="math display">\[\begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix}\]</span>
-<p>. ] If ( ad - bc = 0 ), then ( A ) is not invertible.</p>
-<p> ( n n ) ( ) ( ^n ), ( A = ) [ = A^{-1} . ]</p>
-<p> </p>
-<p> ( n n ) ( A ) ( A ) ( I_n ), ( A ) ( I_n ) ( I_n ) ( A^{-1} ).</p>
-<p></p>
-<p>Place ( A ) and ( I ) side by side to form an augmented matrix ( ). Then perform row operations on the matrix (which will produce identical operations on ( A ) and ( I )). So by the previous theorem:</p>
-<p>[ ]</p>
-<p>or we will find that ( A ) is not invertible (by finding a different reduced echelon form).</p>
-<p>\end{document}</p>
+<p>Note: Not all <span class="math inline">\(( n \times n )\)</span> matrices are invertible. A matrix which is not invertible is sometimes called a singular matrix.</p>
+<p>An invertible matrix is sometimes called a nonsingular matrix.</p>
+<p><strong>Theorem</strong> 1: (Inverse of a <span class="math inline">\(( 2 \times 2 )\)</span> invertible matrix). Let <span class="math display">\[[
+A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}.
+]\]</span> If <span class="math inline">\(( ad - bc \neq 0 )\)</span>, then <span class="math inline">\(( A )\)</span> is invertible and <span class="math display">\[[
+A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix}.
+]\]</span> If <span class="math inline">\(( ad - bc = 0 )\)</span>, then <span class="math inline">\(( A )\)</span> is not invertible. `</p>
+<p><strong>Theorem</strong> 2: If <span class="math inline">\(( A )\)</span> is an invertible <span class="math inline">\(( n \times n )\)</span> matrix, then for each <span class="math inline">\(( \mathbf{b} )\)</span> in <span class="math inline">\(( \mathbb{R}^n )\)</span>, the equation <span class="math inline">\(( A\mathbf{x} = \mathbf{b} )\)</span> has the unique solution <span class="math display">\[[
+\mathbf{x} = A^{-1} \mathbf{b}.
+]\]</span></p>
+<p><strong>Theorem</strong> 3: Suppose <span class="math inline">\(( A )\)</span> and <span class="math inline">\(( B )\)</span> are invertible. Then the following results hold:</p>
+<p>(a): <span class="math inline">\(( A^{-1} )\)</span> is invertible and <span class="math inline">\(( (A^{-1})^{-1} = A )\)</span> (i.e.&nbsp;<span class="math inline">\(( A )\)</span> is the inverse of <span class="math inline">\(( A^{-1} )\)</span>)</p>
+<p>(b): <span class="math inline">\(( AB )\)</span> is invertible and <span class="math inline">\(( (AB)^{-1} = B^{-1} A^{-1} )\)</span></p>
+<p>(c): <span class="math inline">\(( A^T )\)</span> is invertible and <span class="math inline">\(( (A^T)^{-1} = (A^{-1})^T )\)</span></p>
+<p><strong>Theorem</strong> 4: An <span class="math inline">\(( n \times n )\)</span> matrix <span class="math inline">\(( A )\)</span> is invertible if and only if <span class="math inline">\(( A )\)</span> is row equivalent to <span class="math inline">\(( I_n )\)</span>, and in this case, any sequence of elementary row operations that reduces <span class="math inline">\(( A )\)</span> <span class="math inline">\(( I_n )\)</span> will also transform <span class="math inline">\(( I_n )\)</span> into <span class="math inline">\(( A^{-1} )\)</span>.</p>
+<p>Algorithm for finding <span class="math inline">\(( A^{-1} )\)</span></p>
+<p>Place <span class="math inline">\(( A )\)</span> and <span class="math inline">\(( I )\)</span> side by side to form an augmented matrix <span class="math inline">\(( \left[ A \mid I \right] )\)</span>. Then perform row operations on the matrix (which will produce identical operations on <span class="math inline">\(( A )\)</span> and <span class="math inline">\(( I )\)</span>). So by the previous theorem:</p>
+<p><span class="math display">\[[
+\left[ A \mid I \right] \text{ will row reduce to } \left[ I \mid A^{-1} \right]
+]\]</span></p>
+<p>or we will find that <span class="math inline">\(( A )\)</span> is not invertible (by finding a different reduced echelon form).</p>
 </section>
 
 </main>

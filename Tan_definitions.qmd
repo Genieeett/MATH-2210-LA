@@ -418,7 +418,7 @@ $[x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \dots + x_n \mathbf{a}_n = \mathbf{b}.]$
 
 # Section 1.5: Solution Sets of Linear Systems (Homogeneous and Non-Homogeneous systems)
 
-## Homogeneous systems
+### Homogeneous systems
 Def: Is one where the augumented part is all zeros. As a matrix equation we have A $\vec{x}$ = $\vec{O}$
 
 It is always consistent.
@@ -444,13 +444,13 @@ If there are only dependent variables (no free variables), there is only the tri
 - If there are free variables, there are infinitely many nontrivial solutions.
 
 
-## Non-Homogeneous systems
+### Non-Homogeneous systems
 Def: Is one of the form A $\vec{x}$ = $\vec{b}$ where $\vec{b}$ NOT equal to $\vec{O}$
 
 
 # Section 1.7: Linear Independence 
 
-## Linear independence
+### Linear independence
 Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly independent** if:
 
 $$
@@ -462,7 +462,7 @@ $$
 c_1 = 0, \quad c_2 = 0, \quad \ldots, \quad c_n = 0
 $$
 
-## Linear dependence:
+### Linear dependence:
 Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly dependent** if:
 $$
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{0}
@@ -702,53 +702,44 @@ $$[
 \boxed{ AA^{-1} = A^{-1} A = I_n }
 ]$$
 
-Note: Not all $( n \times n )$ matrices are invertible. A matrix which is not invertible is sometimes called a \textbf{singular} matrix.
+Note: Not all $( n \times n )$ matrices are invertible. A matrix which is not invertible is sometimes called a singular matrix.
 
-An invertible matrix is sometimes called a \textbf{nonsingular} matrix.
+An invertible matrix is sometimes called a nonsingular matrix.
 
-\vspace{0.5cm}
-
-\textbf{Theorem 1} (Inverse of a \( 2 \times 2 \) invertible matrix). \textit{Let}
-\[
+**Theorem** 1: (Inverse of a $( 2 \times 2 )$ invertible matrix). Let
+$$[
 A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}.
-\]
-If \( ad - bc \neq 0 \), then \( A \) is invertible and
-\[
+]$$
+If $( ad - bc \neq 0 )$, then $( A )$ is invertible and
+$$[
 A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}.
-\]
-If \( ad - bc = 0 \), then \( A \) is not invertible.
+]$$
+If $( ad - bc = 0 )$, then $( A )$ is not invertible.
+`
 
-\vspace{0.5cm}
-
-\textbf{Theorem 2.} \textit{If \( A \) is an invertible} \( n \times n \) \textit{matrix, then for each} \( \mathbf{b} \) \textit{in} \( \mathbb{R}^n \), \textit{the equation} \( A\mathbf{x} = \mathbf{b} \) \textit{has the unique solution}
-\[
+**Theorem** 2: If $( A )$ is an invertible $( n \times n )$ matrix, then for each $( \mathbf{b} )$ in $( \mathbb{R}^n )$, the equation $( A\mathbf{x} = \mathbf{b} )$ has the unique solution
+$$[
 \mathbf{x} = A^{-1} \mathbf{b}.
-\]
+]$$
 
-\vspace{0.5cm}
 
-\textbf{Theorem 3.} \textit{Suppose \( A \) and \( B \) are invertible. Then the following results hold:}
+**Theorem** 3: Suppose $( A )$ and $( B )$ are invertible. Then the following results hold:
 
-\begin{itemize}
-    \item[(a)] \( A^{-1} \) is invertible and \( (A^{-1})^{-1} = A \) \hfill (i.e. \( A \) is the inverse of \( A^{-1} \))
-    \item[(b)] \( AB \) is invertible and \( (AB)^{-1} = B^{-1} A^{-1} \)
-    \item[(c)] \( A^T \) is invertible and \( (A^T)^{-1} = (A^{-1})^T \)
-\end{itemize}
+(a): $( A^{-1} )$ is invertible and $( (A^{-1})^{-1} = A )$ (i.e. $( A )$ is the inverse of $( A^{-1} )$)
 
-\vspace{0.5cm}
+(b): $( AB )$ is invertible and $( (AB)^{-1} = B^{-1} A^{-1} )$
 
-\textbf{Theorem 4.} \textit{An} \( n \times n \) \textit{matrix} \( A \) \textit{is invertible if and only if} \( A \) \textit{is row equivalent to} \( I_n \), \textit{and in this case, any sequence of elementary row operations that reduces} \( A \) \textit{to} \( I_n \) \textit{will also transform} \( I_n \) \textit{into} \( A^{-1} \).
+(c): $( A^T )$ is invertible and $( (A^T)^{-1} = (A^{-1})^T )$
 
-\vspace{0.5cm}
 
-\textbf{Algorithm for finding \( A^{-1} \)}
+**Theorem** 4: An $( n \times n )$ matrix $( A )$ is invertible if and only if $( A )$ is row equivalent to $( I_n )$, and in this case, any sequence of elementary row operations that reduces $( A )$ \textit{to} $( I_n )$ will also transform $( I_n )$ into $( A^{-1} )$.
 
-Place \( A \) and \( I \) side by side to form an augmented matrix \( \left[ A \mid I \right] \). Then perform row operations on the matrix (which will produce identical operations on \( A \) and \( I \)). So by the previous theorem:
+Algorithm for finding $( A^{-1} )$
 
-\[
+Place $( A )$ and $( I )$ side by side to form an augmented matrix $( \left[ A \mid I \right] )$. Then perform row operations on the matrix (which will produce identical operations on $( A )$ and $( I )$). So by the previous theorem:
+
+$$[
 \left[ A \mid I \right] \text{ will row reduce to } \left[ I \mid A^{-1} \right]
-\]
+]$$
 
-or we will find that \( A \) is not invertible (by finding a different reduced echelon form).
-
-\end{document}
+or we will find that $( A )$ is not invertible (by finding a different reduced echelon form).
