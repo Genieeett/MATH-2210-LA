@@ -2,7 +2,7 @@
 Title: "Notes"
 ---
 
-# Part 0: Equations (systems)
+# Section 1.1: Systems of Linear Equations
 
 ### System of linear equations
 $$
@@ -13,12 +13,21 @@ x - 2y + 4z = -5
 \end{cases}
 $$
 
+**n x m matrix**
+
+**row x column matrix**
+
+**horizonal x vertical matirx**
+
+**Sequances matters**
+
+
 ### Solution
 - Exactly one solution (consistant, unique)
 - Infinite many solutions (consist, not unique)
 - No solutions (inconsist)
 
-# Part 1: Types of Matrix and (R)REF
+# Section 1.2: Row Reduction and Echelon Forms
 
 
 ### Coefficient matrix
@@ -189,13 +198,7 @@ $$
 
 
 
-# Part 2: Linear combination
-
-
-### linear conbination of vectors
-Def: A linear conbination of vectors is a combination that uses addition and scalar multiplication
-
-linear combos of $\hat{\imath}$, $\hat{\jmath}$
+# Section 1.3: Vector Equations (Span)
 
 ### Span
 Def: The span of a set of vector $\{\hat{\jmath}_1, \hat{\jmath}_2, \dots, \hat{\jmath}_n\}$ is the set of all linear combination of those vector
@@ -374,7 +377,46 @@ $$
 the third row is 0 = -4, which mean it is in consistant
 
 
-# Part 1.7.1: Homogeneous and Non-Homogeneous systems
+
+# Section 1.4: The Matrix Equation Ax = b
+
+
+### linear conbination of vectors
+Def: A linear conbination of vectors is a combination that uses addition and scalar multiplication
+
+linear combos of $\hat{\imath}$, $\hat{\jmath}$
+
+
+**Theorem** 1: If $( A )$ is an $( m \times n )$ matrix, with columns $( \mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n )$, and if $( \mathbf{b} )$ is in $( \mathbb{R}^m )$, then the matrix equation
+
+$[A\mathbf{x} = \mathbf{b}]$
+
+has the same solution set as the vector equation
+
+$[x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \dots + x_n \mathbf{a}_n = \mathbf{b}.]$
+
+
+**Theorem** 2: Let $( A )$ be an $( m \times n )$ matrix. Then the following statements are logically equivalent:
+
+(a): $For each ( \mathbf{b} ) in ( \mathbb{R}^m ), the equation ( A\mathbf{x} = \mathbf{b} ) has a solution.$
+
+(b): $Each ( \mathbf{b} ) in ( \mathbb{R}^m ) is a linear combination of the columns of ( A ).$
+
+(c): $The columns of ( A ) span ( \mathbb{R}^m ).$
+
+(d): $( A ) has a pivot position in every row.$
+
+
+**Theorem** 3: If $( A )$ is an $( m \times n )$ matrix, $( \mathbf{u} )$ and $( \mathbf{v} )$ are vectors in $( \mathbb{R}^n )$, and $( c )$ is a scalar, then:
+
+(a): $( A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v} )$
+(b): $( A(c\mathbf{u}) = c A\mathbf{u} )$
+
+
+
+
+
+# Section 1.5: Solution Sets of Linear Systems (Homogeneous and Non-Homogeneous systems)
 
 ## Homogeneous systems
 Def: Is one where the augumented part is all zeros. As a matrix equation we have A $\vec{x}$ = $\vec{O}$
@@ -406,7 +448,7 @@ If there are only dependent variables (no free variables), there is only the tri
 Def: Is one of the form A $\vec{x}$ = $\vec{b}$ where $\vec{b}$ NOT equal to $\vec{O}$
 
 
-# Part 1.7.2: Linear independence/dependence
+# Section 1.7: Linear Independence 
 
 ## Linear independence
 Def: A set of vectors $( \{ \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \} )$ is **linearly independent** if:
@@ -438,9 +480,9 @@ $$
 
 
 
-# Part 1.8: Transformation
+# Section 1.8: Introduction to Linear Transformations
 
-## Transformation
+### Transformation
 Def: A transformation is sth that turns one object into another
 
 $\mathcal{T}$ $\mathbb{R} \to \mathbb{R}$
@@ -461,7 +503,7 @@ Range is a subset of the Codomain
 
 
 
-# Linear transformation
+### Linear transformation
 Def: a transformation $\mathcal{T}$ is linear if:
     
 (1): $\mathcal{T}(\vec{x}+\vec{y})=\mathcal{T}(\vec{x})+\mathcal{T}({x})$
@@ -475,3 +517,238 @@ $\mathcal{T}(\text{c}\vec{x}+\text{d}\vec{y})=\text{c}\mathcal{T}(\vec{x})+\text
 
 To show something is linear, just need to prove one of two properties are equal.
 To show something is not linear, need to list all four ways (see Feb 13 class examples).
+
+
+
+# Section 1.9: The Matrix of a Linear Transformation
+
+Def: The Identity Matrix $( I_n )$ is an $( n \times n )$ matrix with 1’s on the main diagonal and 0’s elsewhere. The $( i^{th} )$ column of $( I_n )$ is labeled $( \mathbf{e}_i )$.
+
+$$[
+I_3 = \begin{bmatrix} \mathbf{e}_1 & \mathbf{e}_2 & \mathbf{e}_3 \end{bmatrix} = 
+\begin{bmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 
+\end{bmatrix}
+]$$
+
+Note that
+
+$$[
+I\mathbf{x} = 
+\begin{bmatrix} 
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 
+\end{bmatrix}
+\begin{bmatrix} 
+x_1 \\ 
+x_2 \\ 
+x_3 
+\end{bmatrix}
+]$$
+
+In general, for any $( \mathbf{x} )$ in $( \mathbb{R}^n )$,
+
+$$[
+I_n \mathbf{x} = \vec{x}
+]$$
+
+
+
+# Section 2.1: Matrix Operations
+
+### Matrix Notation:
+
+Two ways to denote an $( m \times n )$ matrix $( A )$:
+
+1. In terms of the columns of $( A )$
+
+$$[
+A = \begin{bmatrix} \mathbf{a}_1 & \mathbf{a}_2 & \cdots & \mathbf{a}_n \end{bmatrix}
+]$$
+
+2. In terms of the entries of $( A )$
+
+$$[
+A =
+\begin{bmatrix}
+a_{11} & \cdots & a_{1j} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots &  & \vdots \\
+a_{i1} & \cdots & a_{ij} & \cdots & a_{in} \\
+\vdots &  & \vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mj} & \cdots & a_{mn}
+\end{bmatrix}
+]$$
+
+Main diagonal entries: $(\ a_{11}, a_{22}, a_{33}, \dots, a_{mm} )$
+
+
+**Theorem 1:** Let $( A, B, \text{ and } C )$ be matrices of the same size, and let $( r )$ and $( s )$ be scalars. Then
+
+(a): $( A + B = B + A )$
+
+(b): $( (A + B) + C = A + (B + C) )$
+
+(c): $( A + 0 = A )$
+
+(d): $( r(A + B) = rA + rB )$
+
+(e): $( (r + s)A = rA + sA )$
+
+(f): $( r(sA) = (rs)A )$
+
+
+### Matrix Multiplication:
+
+Multiplying $( B )$ and $( \mathbf{x} )$ transforms $( \mathbf{x} )$ into the vector $( B\mathbf{x} )$. In turn, if we multiply $( A )$ and $( B\mathbf{x} )$, we transform $( B\mathbf{x} )$ into $( A(B\mathbf{x}) )$. So $( A(B\mathbf{x}) )$ is the composition of two mappings.
+
+
+Define the product $( AB )$ so that $( A(B\mathbf{x}) = (AB)\mathbf{x} )$.
+
+
+Suppose $( A )$ is $( m \times n )$ and $( B )$ is $( n \times p )$ where
+
+$$[
+B = \begin{bmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_p \end{bmatrix}
+\quad \text{and} \quad
+\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{bmatrix}.
+]$$
+
+
+Then,
+
+$$[
+B\mathbf{x} = x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2 + \dots + x_p \mathbf{b}_p
+]$$
+
+and
+
+$$[
+A(B\mathbf{x}) = A(x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2 + \dots + x_p \mathbf{b}_p)
+]$$
+
+$$[
+= A(x_1 \mathbf{b}_1) + A(x_2 \mathbf{b}_2) + \dots + A(x_p \mathbf{b}_p)
+]$$
+
+$$[
+= x_1 A \mathbf{b}_1 + x_2 A \mathbf{b}_2 + \dots + x_p A \mathbf{b}_p
+= \begin{bmatrix} A \mathbf{b}_1 & A \mathbf{b}_2 & \dots & A \mathbf{b}_p \end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{bmatrix}.
+]$$
+
+Therefore,
+
+$$[
+A(B\mathbf{x}) = \begin{bmatrix} A \mathbf{b}_1 & A \mathbf{b}_2 & \dots & A \mathbf{b}_p \end{bmatrix} \mathbf{x}
+]$$
+
+and by defining
+
+$$[
+AB = \begin{bmatrix} A \mathbf{b}_1 & A \mathbf{b}_2 & \dots & A \mathbf{b}_p \end{bmatrix}
+]$$
+
+we have
+
+$$[
+A(B\mathbf{x}) = (AB)\mathbf{x}.
+]$$
+
+
+**Theorem** 2: Let $( A )$ be $( m \times n )$ and let $( B )$ and $( C )$ have sizes for which the indicated sums and products are defined.
+
+(a): $( A(BC) = (AB)C )$ (associative law of multiplication)
+
+(b): $( A(B + C) = AB + AC )$ (left - distributive law)
+
+(c): $( (B + C)A = BA + CA )$ (right - distributive law)
+
+(d): $( r(AB) = (rA)B = A(rB) ) $ for any scalar  $( r )$
+
+(e): $( I_m A = A = A I_n )$  (identity for matrix multiplication)
+
+
+**Theorem** 3: Let $( A )$ and $( B )$ denote matrices whose sizes are appropriate for the following sums and products.
+
+(a): $( (A^T)^T = A )$ i.e. the transpose of $( A^T )$ is $( A )$
+
+(b): $( (A + B)^T = A^T + B^T )$
+
+(c): For any scalar $( r )$, $( (rA)^T = rA^T )$.
+
+(d): $( (AB)^T = B^T A^T )$ i.e. the transpose of a product of matrices equals the product of their transposes in reverse order
+
+(e): $[(ABC)^T = ((AB)C)^T = C^T (AB)^T = C^T (B^T A^T) = C^T B^T A^T]$
+
+
+
+
+# Section 2.2: The Inverse of a Matrix
+Def: An $( n \times n )$ matrix $( A )$ is said to be invertible if there is an $( n \times n )$ matrix $( C )$ satisfying
+
+$$[
+CA = AC = I_n
+]$$
+
+where $( I_n )$ is the $( n \times n )$ identity matrix. We call $( C )$ the inverse of $( A )$.
+
+Fact: If $( A )$ is invertible, then the inverse is unique.
+
+
+$$[
+\boxed{ AA^{-1} = A^{-1} A = I_n }
+]$$
+
+Note: Not all $( n \times n )$ matrices are invertible. A matrix which is not invertible is sometimes called a \textbf{singular} matrix.
+
+An invertible matrix is sometimes called a \textbf{nonsingular} matrix.
+
+\vspace{0.5cm}
+
+\textbf{Theorem 1} (Inverse of a \( 2 \times 2 \) invertible matrix). \textit{Let}
+\[
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}.
+\]
+If \( ad - bc \neq 0 \), then \( A \) is invertible and
+\[
+A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}.
+\]
+If \( ad - bc = 0 \), then \( A \) is not invertible.
+
+\vspace{0.5cm}
+
+\textbf{Theorem 2.} \textit{If \( A \) is an invertible} \( n \times n \) \textit{matrix, then for each} \( \mathbf{b} \) \textit{in} \( \mathbb{R}^n \), \textit{the equation} \( A\mathbf{x} = \mathbf{b} \) \textit{has the unique solution}
+\[
+\mathbf{x} = A^{-1} \mathbf{b}.
+\]
+
+\vspace{0.5cm}
+
+\textbf{Theorem 3.} \textit{Suppose \( A \) and \( B \) are invertible. Then the following results hold:}
+
+\begin{itemize}
+    \item[(a)] \( A^{-1} \) is invertible and \( (A^{-1})^{-1} = A \) \hfill (i.e. \( A \) is the inverse of \( A^{-1} \))
+    \item[(b)] \( AB \) is invertible and \( (AB)^{-1} = B^{-1} A^{-1} \)
+    \item[(c)] \( A^T \) is invertible and \( (A^T)^{-1} = (A^{-1})^T \)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Theorem 4.} \textit{An} \( n \times n \) \textit{matrix} \( A \) \textit{is invertible if and only if} \( A \) \textit{is row equivalent to} \( I_n \), \textit{and in this case, any sequence of elementary row operations that reduces} \( A \) \textit{to} \( I_n \) \textit{will also transform} \( I_n \) \textit{into} \( A^{-1} \).
+
+\vspace{0.5cm}
+
+\textbf{Algorithm for finding \( A^{-1} \)}
+
+Place \( A \) and \( I \) side by side to form an augmented matrix \( \left[ A \mid I \right] \). Then perform row operations on the matrix (which will produce identical operations on \( A \) and \( I \)). So by the previous theorem:
+
+\[
+\left[ A \mid I \right] \text{ will row reduce to } \left[ I \mid A^{-1} \right]
+\]
+
+or we will find that \( A \) is not invertible (by finding a different reduced echelon form).
+
+\end{document}
